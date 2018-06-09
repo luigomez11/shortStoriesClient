@@ -1,23 +1,38 @@
 import stories from '../data/stories';
-import { INCREMENT_LIKES, ADD_STORY } from '../actions/index';
+import { FETCH_STORIES_SUCCESS, FETCH_STORIES_ERROR } from '../actions/index';
 
-const defaultState = { stories };
+const initialState = { 
+    stories,
+    error: null
+};
 
-console.log(defaultState);
-
-function rootReducer(state=defaultState, action){
+function rootReducer(state = initialState, action){
     switch(action.type){
 
-        case INCREMENT_LIKES:
+        /*case INCREMENT_LIKES:
         console.log(action);
+        const newStories = state.stories.map(item => {
+            if(item.id === action.id){
+                item.likes++;
+                return item;
+            }
+            return item;
+        })
         return Object.assign({}, state, {
-            stories: [...stories, action.story]
+            stories: [...newStories]
+        })*/
+
+        //create async action for adding stories, fetch again...
+
+        case FETCH_STORIES_SUCCESS:
+        return Object.assign({}, state, {
+            stories: [...action.stories],
+            error: null
         })
 
-        case ADD_STORY:
-        console.log(action);
+        case FETCH_STORIES_ERROR:
         return Object.assign({}, state, {
-            stories: [...stories, action.story]
+            error: action.error
         })
 
     }

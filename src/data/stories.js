@@ -1,5 +1,5 @@
 const stories = [
-    {
+    /*{
         "id": "12345678901",
         "title": "The Hunter's Wife",
         "story": "It was the hunter's first time outside Montana. He woke, stricken still with the hours-old vision of ascending through rose-lit cumulus, of houses and barns like specks deep in the snowed-in valleys, all the scrolling country below looking December—brown and black hills streaked with snow, flashes of iced-over lakes, the long braids of a river gleaming at the bottom of a canyon. Above the wing the sky had deepened to a blue so pure he knew it would bring tears to his eyes if he looked long enough.",
@@ -28,7 +28,23 @@ const stories = [
         "title": "THE TRUTH OF FACT, THE TRUTH OF FEELING",
         "story": "When my daughter Nicole was an infant, I read an essay suggesting that it might no longer be necessary to teach children how to read or write, because speech recognition and synthesis would soon render those abilities superfluous. My wife and I were horrified by the idea, and we resolved that, no matter how sophisticated technology became, our daughter’s skills would always rest on the bedrock of traditional literacy.",
         "likes": 44
-    }
-]
+    }*/
+];
+
+export const loadAuthToken = () => {
+    return localStorage.getItem('authToken');
+};
+
+export const saveAuthToken = authToken => {
+    try {
+        localStorage.setItem('authToken', authToken);
+    } catch (e) {}
+};
+
+export const clearAuthToken = () => {
+    try {
+        localStorage.removeItem('authToken');
+    } catch (e) {}
+};
 
 export default stories;

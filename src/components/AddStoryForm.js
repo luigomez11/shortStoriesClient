@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addStory } from '../actions/index';
+import { postStory } from '../actions/index';
 
 class AddStoryForm extends React.Component {
 
@@ -11,10 +11,10 @@ class AddStoryForm extends React.Component {
         event.preventDefault();
         const newStory = {
             title: this.titleRef.value,
-            story: this.storyRef.value
+            body: this.bodyRef.value
         }
-        console.log(newStory);
-        this.props.dispatch(addStory(newStory));
+        this.props.dispatch(postStory(newStory));
+
     }
 
     render(){
@@ -22,7 +22,7 @@ class AddStoryForm extends React.Component {
             <form onSubmit={this.addNewStory}>
                 <span>Submit Story</span><br/>
                 <input ref={input => this.titleRef = input} type="text" name="title" placeholder="title"/><br />
-                <textarea ref={input => this.storyRef = input} name="story" type="text" placeholder="Tell a story."></textarea><br />
+                <textarea ref={input => this.bodyRef = input} name="body" type="text" placeholder="Tell a story."></textarea><br />
                 <button type="submit">Submit</button>
             </form>
         )

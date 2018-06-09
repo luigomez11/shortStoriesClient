@@ -3,6 +3,7 @@ import SingleStory from './SingleStory';
 import { connect } from 'react-redux';
 
 class RandomStory extends React.Component {
+
     render(){
         const story = this.props.stories[Math.floor(Math.random()*this.props.stories.length)];
         return (
@@ -14,7 +15,7 @@ class RandomStory extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    stories: state.stories || []
+    stories: state.rootReducer.stories || []
 })
 
 export default connect(mapStateToProps)(RandomStory);

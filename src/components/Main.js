@@ -15,7 +15,6 @@ class Main extends React.Component {
         return (
             <div className="main">
                 <RandomStory />
-                <Link to="/addStory"><button>Add a Story</button></Link>
                 <TopStories />
             </div>
         )

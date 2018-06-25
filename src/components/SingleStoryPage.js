@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import SingleStory from './SingleStory';
+import RequiresLogin from './RequiresLogin';
 
 class SingleStoryPage extends React.Component {
     render(){
@@ -16,4 +17,4 @@ const mapStateToProps = state => ({
     stories: state.rootReducer.stories || []
 })
 
-export default connect(mapStateToProps)(SingleStoryPage);
+export default RequiresLogin()(connect(mapStateToProps)(SingleStoryPage));

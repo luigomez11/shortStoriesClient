@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { postStory } from '../actions/index';
+import { Link, Redirect } from 'react-router-dom';
+import RequiresLogin from './RequiresLogin';
 
 class AddStoryForm extends React.Component {
 
@@ -11,10 +13,11 @@ class AddStoryForm extends React.Component {
         event.preventDefault();
         const newStory = {
             title: this.titleRef.value,
-            body: this.bodyRef.value
+            body: this.bodyRef.value,
+            user: this.props.user
         }
         this.props.dispatch(postStory(newStory));
-
+        return <Redirect to="/myStories" />
     }
 
     render(){
@@ -29,4 +32,9 @@ class AddStoryForm extends React.Component {
     }
 }
 
-export default connect()(AddStoryForm);
+const mapStateToProps = state => ({
+    stories: state.rootReducer.stories || [],
+    user: state.auth.currentUser.username || ""
+})
+
+export default RequiresLogin()(connect(mapStateToProps)(AddStoryForm));

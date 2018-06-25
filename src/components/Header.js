@@ -13,15 +13,25 @@ export class Header extends React.Component {
     render() {
         // Only render the log out button if we are logged in
         let logOutButton;
+        let addStoryButton;
+        let myStoriesButton;
         if (this.props.loggedIn) {
             logOutButton = (
                 <button onClick={() => this.logOut()}>Log out</button>
             );
+            addStoryButton = (
+                <button>Add Story</button>
+            );
+            myStoriesButton = (
+                <button>My Stories</button>
+            )
         }
         return (
             <div>
                 <Link to="/main"><h1>Random Short Stories</h1></Link>
                 {logOutButton}
+                <Link to="/addStory">{addStoryButton}</Link>
+                <Link to="/myStories">{myStoriesButton}</Link>
             </div>
         );
     }

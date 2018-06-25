@@ -1,5 +1,5 @@
 import stories from '../data/stories';
-import { FETCH_STORIES_SUCCESS, FETCH_STORIES_ERROR } from '../actions/index';
+import { FETCH_STORIES_SUCCESS, FETCH_STORIES_ERROR, FETCH_USER_STORIES_ERROR, FETCH_USER_STORIES_SUCCESS } from '../actions/index';
 
 const initialState = { 
     stories,
@@ -31,6 +31,17 @@ function rootReducer(state = initialState, action){
         })
 
         case FETCH_STORIES_ERROR:
+        return Object.assign({}, state, {
+            error: action.error
+        })
+
+        case FETCH_USER_STORIES_SUCCESS:
+        return Object.assign({}, state, {
+            stories: [...action.stories],
+            error: null
+        })
+        
+        case FETCH_USER_STORIES_ERROR:
         return Object.assign({}, state, {
             error: action.error
         })

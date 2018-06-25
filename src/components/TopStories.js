@@ -1,11 +1,19 @@
 import React from 'react';
 import SingleStory from './SingleStory';
 import { connect } from 'react-redux';
+import { FETCH_STORIES_SUCCESS } from '../actions';
 
 class TopStories extends React.Component {
+
     render(){
 
         const stories = this.props.stories.map((story, index) => <SingleStory key={index}{...story} />);
+        
+        /*const storiesSorted = stories.sort(function(a,b){
+            return b.likes-a.likes
+        });*/
+
+        console.log(stories);
         return (
             <div>
                 I'm a list of the top stories.

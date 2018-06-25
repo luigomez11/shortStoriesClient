@@ -8,7 +8,10 @@ import Main from './Main';
 import RegistrationPage from './RegistrationPage';
 import AddStoryForm from './AddStoryForm';
 import SingleStoryPage from './SingleStoryPage';
+import MyStories from './MyStories';
 import {refreshAuthToken} from '../actions/auth';
+
+import './App.css';
 
 export class App extends React.Component {
   componentDidUpdate(prevProps) {
@@ -49,6 +52,7 @@ export class App extends React.Component {
             <Route exact path="/register" component={RegistrationPage} />
             <Route exact path="/story/:storyId" component={SingleStoryPage} />
             <Route exact path="/addStory" component={AddStoryForm} />
+            <Route exact path="/myStories" component={MyStories} />
         </div>
     );
   }

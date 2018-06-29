@@ -11,7 +11,7 @@ import SingleStoryPage from './SingleStoryPage';
 import MyStories from './MyStories';
 import {refreshAuthToken} from '../actions/auth';
 
-import './App.css';
+//import './App.css';
 
 export class App extends React.Component {
   componentDidUpdate(prevProps) {

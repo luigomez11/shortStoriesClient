@@ -7,7 +7,7 @@ class RandomStory extends React.Component {
     render(){
         const story = this.props.stories[Math.floor(Math.random()*this.props.stories.length)];
         return (
-            <div>
+            <div class="story--random">
                 <SingleStory {...story} />
             </div>
         )

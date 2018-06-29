@@ -8,15 +8,15 @@ class TopStories extends React.Component {
     render(){
 
         const stories = this.props.stories.map((story, index) => <SingleStory key={index}{...story} />);
-        
+
         /*const storiesSorted = stories.sort(function(a,b){
             return b.likes-a.likes
         });*/
 
         console.log(stories);
         return (
-            <div>
-                I'm a list of the top stories.
+            <div class="stories">
+                <p class="stories__intro">Top Stories</p>
                 <ul>
                     <li>
                         {stories}

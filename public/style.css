@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Work+Sans");
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  
+  background-color: #8B0000;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+body {
+  max-width: 1000px;
+  min-height: 750px;
+  margin: 0 auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  background-color: #F08080;
+  padding: 10px;
+  font-family: "Work+Sans", arial; 
+}
+
+.app__title {
+  text-align: center;
+}
+
+.hh2 {
+  font-size: 16px;
+}
+
+.cap {
+  font-size: 75px;
+  color: indigo;
+}
+
+.letters {
+  font-size: 35px;
+  color: red;
+}
+
+.stories__intro{
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: large;
+}
+.app_description{
+  text-align: center;
+  font-size: 12px;
+  color: darkblue;
+}
+
+.home {
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+}
+
+
+.app + div {
+  background-color: red; }
+
+h1, h2, h3 {
+  font-family: 'PT Sans', serif; }
+
+h1 {
+  color: black;
+  text-align: center; }
+
+.main--my {
+  flex-direction: column; }
+  .main--my p:first-child {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 2rem; }
+  .main--my .stories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% !important; }
+
+.my-stories .story__item a {
+  color: #005499; }
+
+.main {
+  display: flex; }
+  @media (max-width: 600px) {
+    .main {
+      flex-direction: column; } }
+  .main .story--random {
+    width: 60%;
+    margin-top: 50px; }
+    @media (max-width: 600px) {
+      .main .story--random {
+        width: 100%; } }
+    .main .story--random .action--like {
+      display: none; }
+  .main .stories {
+    width: 65%; }
+    @media (max-width: 600px) {
+      .main .stories {
+        width: 100%; } }
+    .main .stories__intro {
+      display: flex;
+      justify-content: space-around; }
+    .main .stories li {
+      display: flex;
+      flex-wrap: wrap; }
+    .main .stories .story__body {
+      display: none; }
+    .main .stories .story__item {
+      flex-grow: 1;
+      width: 20%;
+      align-items: center;
+      flex-direction: inherit; }
+      @media (max-width: 1000px) {
+        .main .stories .story__item {
+          width: 50%; } }
+      .main .stories .story__item .action--like {
+        display: none; }
+
+.main-actions {
+  display: flex;
+  justify-content: center; }
+  .main-actions a {
+    margin: .2rem; }
+
+.action--logout {
+  margin-top: 5px;
+  /* position: absolute;
+  top: .1rem;
+  right: .1rem;  */
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: .5px; }
+  h3:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100px;
+    background-color: #0084f0;
+    margin-top: .3rem; }
+
+button {
+  max-width: 100px;
+  padding: 10px 15px;
+  background-color: indigo;
+  border: 1px solid #e2e2e2;
+  cursor: pointer;
+  transition: .2s;
+  color: white;
+  text-transform: uppercase;
+  outline: 0; }
+  button:hover {
+    background-color: #008cff; }
+
+a {
+  text-decoration: none; }
+
+.main {
+  font-family: 'Work Sans', sans-serif; }
+  .main div:first-child div {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 1px 0 1px #0089fa; }
+    .main div:first-child div a {
+      text-decoration: none;
+      color: white; }
+      .main div:first-child div a:first-child:before {
+        float: right;
+        color: #058eff;
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005"; }
+      .main div:first-child div a p {
+        line-height: 1.8rem; }
+    .main div:first-child div button {
+      align-self: flex-end; }
+  .main ul {
+    padding: 0; }
+    .main ul li > div {
+      background-color: indigo;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      margin: 1rem;
+      box-shadow: 1px 0 1px #0089fa; }
+      .main ul li > div a {
+        text-decoration: none;
+        color: white;
+        display: block; }
+        .main ul li > div a p {
+          line-height: 1.8rem; }
+      .main ul li > div button {
+        align-self: flex-end; }
+
+.story__item a {
+  color: #005499; }
+.story__body {
+  line-height: 1.6rem; }
+
+.form--add {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto; }
+  .form--add span {
+    margin-top: 2rem; }
+  .form--add input, .form--add textarea {
+    padding: .5rem;
+    outline: 0;
+    border: 1px solid #008cff; }
+  .form--add textarea {
+    min-height: 6rem; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Work+Sans');
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+$color--main:  #008cff;
+$breakpoint--tablet: 1000px;
+$breakpoint--phone: 600px;
+
+body {
+  background-color: white;
+  font-family: "Work+Sans", arial;
+}
+
+.app {
+  & + div {
+    background-color: red;
+  }
+}
+
+h1, h2, h3 {
+  font-family: 'PT Sans', serif;
+}
+
+h1 {
+  color: darken($color--main, 70);
+  text-align: center;
+}
+
+.main--my {
+  flex-direction: column;
+  p:first-child {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+  .stories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% !important;
+  }
+}
+
+.my-stories .story {
+
+  &__item {
+    // line-height: 40px;
+
+    a {
+      color: darken($color--main, 20);
+    }
+  }
+}
+
+.main {
+  display: flex;
+  @media (max-width: $breakpoint--phone) {
+    flex-direction: column;
+  }
+  .story {
+    &--random {
+      width: 35%;
+      margin-top: 50px;
+      @media (max-width: $breakpoint--phone) {
+        width: 100%;
+      }
+      .action--like {
+        display: none;
+      }
+    }
+  }
+  .stories {
+    width: 65%;
+    @media (max-width: $breakpoint--phone) {
+      width: 100%;
+    }
+
+    &__intro {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    li {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .story {
+
+
+      &__body {
+        display: none;
+      }
+
+      &__item {
+        flex-grow: 1;
+        width: 20%;
+        @media (max-width: $breakpoint--tablet) {
+          width: 50%;
+        }
+        align-items: center;
+        flex-direction: inherit;
+
+        .action--like {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// a[href$='main'] button {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
+//
+// a[href$='addStory'] {
+//   margin: 0 auto;
+//   max-width: 100px;
+//   display: block;
+// }
+
+.main-actions {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: .2rem;
+  }
+}
+
+.action{
+
+  &--logout {
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+  }
+
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: .5px;
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100px;
+    background-color: darken($color--main, 3);
+    margin-top: .3rem;
+  }
+}
+
+button {
+  max-width: 100px;
+  padding: 10px 15px;
+  background-color: lighten($color--main, 10);
+  border: 1px solid #e2e2e2;
+  cursor: pointer;
+  transition: .2s;
+  color: white;
+  text-transform: uppercase;
+  outline: 0;
+
+  &:hover {
+    background-color: $color--main;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  font-family: 'Work Sans', sans-serif;
+
+  & div:first-child div {
+    background-color: lighten($color--main, 10);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 1px 0 1px darken($color--main, 1);
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:first-child {
+        &:before {
+          float: right;
+          color: lighten($color--main, 1);
+          margin: 5px;
+          font-size: 1.25em;
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f005";
+        }
+      }
+
+      p {
+        line-height: 1.8rem;
+      }
+    }
+    button {
+      align-self: flex-end;
+    }
+  }
+  ul {
+    padding: 0;
+    li {
+      > div {
+        background-color: lighten($color--main, 5);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin: 1rem;
+        box-shadow: 1px 0 1px darken($color--main, 1);
+        a {
+          text-decoration: none;
+          color: white;
+          display: block;
+          // height: 100%;
+          p {
+            line-height: 1.8rem;
+          }
+        }
+        button {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.story {
+
+  &__item a {
+    color: darken($color--main, 20);
+
+  }
+  &__body {
+    line-height: 1.6rem;
+  }
+}
+
+.form {
+
+  &--add {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+
+    span {
+      margin-top: 2rem;
+    }
+
+    input, textarea {
+      padding: .5rem;
+      outline: 0;
+      border: 1px solid $color--main;
+    }
+
+    textarea {
+      min-height: 6rem;
+    }
+  }
+}

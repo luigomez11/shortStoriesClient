@@ -17,14 +17,15 @@ class AddStoryForm extends React.Component {
             user: this.props.user
         }
         this.props.dispatch(postStory(newStory));
-        return <Redirect to="/myStories" />
+        this.titleRef.value = "";
+        this.bodyRef.value = "";
     }
 
     render(){
         return (
-            <form onSubmit={this.addNewStory}>
+            <form onSubmit={this.addNewStory} class="form--add">
                 <span>Submit Story</span><br/>
-                <input ref={input => this.titleRef = input} type="text" name="title" placeholder="title"/><br />
+                <input ref={input => this.titleRef = input} type="text" name="title" placeholder="Title"/><br />
                 <textarea ref={input => this.bodyRef = input} name="body" type="text" placeholder="Tell a story."></textarea><br />
                 <button type="submit">Submit</button>
             </form>

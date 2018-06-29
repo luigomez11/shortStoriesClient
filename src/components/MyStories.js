@@ -14,10 +14,10 @@ class MyStories extends React.Component {
         console.log(this.props.stories);
         const stories = this.props.stories.map((story, index) => <SingleStory key={index}{...story} />);
         return (
-            <div>
-            Here are my submitted stories
+            <div class="main main--my">
+            <p>Here are my submitted stories</p>
             <ul>
-                <li>
+                <li class="stories">
                     {stories}
                 </li>
             </ul>

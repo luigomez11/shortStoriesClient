@@ -20,17 +20,17 @@ class SingleStory extends React.Component {
         let deleteButton;
         if(this.props.user === this.props.userNow){
             deleteButton = (
-                <button onClick={this.delete}>Delete</button>
+                <Link to="/after"><button onClick={this.delete} class="action--delete">Delete</button></Link>
             );
         }
         return (
-            <div>
+            <div class="story__item">
                 <Link to={'/story/'+this.props.id}>
-                    <h3>{this.props.title}</h3>
-                    <p>{this.props.body}</p>
+                    <h3 class="story__title">{this.props.title}</h3>
+                    <p class="story__body">{this.props.body}</p>
                 </Link>
-                <button onClick={this.increment}>Likes: {this.props.likes}</button>
-                <Link to="/myStories">{deleteButton}</Link>
+                <button onClick={this.increment} class="action--like">Likes: {this.props.likes}</button>
+                <Link to="/myStories" class="action-my">{deleteButton}</Link>
             </div>
         )
     }

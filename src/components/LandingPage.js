@@ -12,12 +12,12 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h2 class="app__title hh2">Welcome to StoryTime !</h2>
-            <p class="app_description">Are you currently in the middle of some serious procrastination? Is there something you'd like to get off your chest? Waste hours away reading through various anonymous short stories or add your own story. Again, it's completely anonymous, so NO JUDGEMENT HERE! Login to join the fun.
+            <h2 className="app__title hh2">Welcome to StoryTime !</h2>
+            <p className="app_description">Are you currently in the middle of some serious procrastination? Is there something you'd like to get off your chest? Waste hours away reading through various anonymous short stories or add your own story. Again, it's completely anonymous, so NO JUDGEMENT HERE! Login to join the fun.
 
  </p>
             <LoginForm />
-            <Link to="/register"  class="register">Register</Link>
+            <Link to="/register"  className="register">Register</Link>
         </div>
     );
 }

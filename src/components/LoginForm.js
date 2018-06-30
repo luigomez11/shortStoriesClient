@@ -41,7 +41,7 @@ export class LoginForm extends React.Component {
                     id="password"
                     validate={[required, nonEmpty]}
                 />
-                <button disabled={this.props.pristine || this.props.submitting} class="action--logout">
+                <button disabled={this.props.pristine || this.props.submitting} className="action--logout">
                     Log in
                 </button>
             </form>

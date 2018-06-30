@@ -17,7 +17,7 @@ export class Header extends React.Component {
         let myStoriesButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <button onClick={() => this.logOut()} class="action--logout">Log out</button>
+                <button onClick={() => this.logOut()} className="action--logout">Log out</button>
             );
             addStoryButton = (
                 <button>Add Story</button>
@@ -28,16 +28,16 @@ export class Header extends React.Component {
         }
         return (
             <div>
-                <Link to="/main"><h1 class="app__title hh1">
-                <span class="cap">S</span>
-                <span class="letters">tory</span>
-                <span class="cap">T</span>
-                <span class="letters">ime</span>
+                <Link to="/main"><h1 className="app__title hh1">
+                <span className="cap">S</span>
+                <span className="letters">tory</span>
+                <span className="cap">T</span>
+                <span className="letters">ime</span>
                 </h1></Link>
                 {logOutButton}
-                <div class="main-actions">
-                  <Link to="/addStory" class="action--add">{addStoryButton}</Link>
-                  <Link to="/myStories" class="action--my">{myStoriesButton}</Link>
+                <div className="main-actions">
+                  <Link to="/addStory" className="action--add">{addStoryButton}</Link>
+                  <Link to="/myStories" className="action--my">{myStoriesButton}</Link>
                 </div>
             </div>
         );

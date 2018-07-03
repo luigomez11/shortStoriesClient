@@ -4,7 +4,6 @@ import TopStories from './TopStories';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/index';
 import RequiresLogin from './RequiresLogin';
-import { Link } from 'react-router-dom';
 
 class Main extends React.Component {
     componentDidMount(){

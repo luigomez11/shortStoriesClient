@@ -1,7 +1,6 @@
 import React from 'react';
 import SingleStory from './SingleStory';
 import { connect } from 'react-redux';
-import { FETCH_STORIES_SUCCESS } from '../actions';
 
 class TopStories extends React.Component {
 

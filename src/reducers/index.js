@@ -46,9 +46,9 @@ function rootReducer(state = initialState, action){
             error: action.error
         })
 
+        default: return state;
+
     }
-    
-    return state;
 }
 
 export default rootReducer;

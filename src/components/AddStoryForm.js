@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { postStory } from '../actions/index';
-import { Link, Redirect } from 'react-router-dom';
 import RequiresLogin from './RequiresLogin';
 
 class AddStoryForm extends React.Component {
